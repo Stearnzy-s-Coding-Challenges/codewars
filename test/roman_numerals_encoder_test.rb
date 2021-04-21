@@ -8,4 +8,11 @@ class RomanNumeralsEncoderTest < Minitest::Test
     encoder = RomanNumeralsEncoder.new
     assert_instance_of RomanNumeralsEncoder, encoder
   end
+
+  def test_converts_1000_to_M
+    encoder = RomanNumeralsEncoder.new
+    number = 1000
+
+    assert_equal 'M', encoder.solution(number)
+  end
 end
