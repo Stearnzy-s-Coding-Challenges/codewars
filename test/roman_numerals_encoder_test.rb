@@ -15,4 +15,11 @@ class RomanNumeralsEncoderTest < Minitest::Test
 
     assert_equal 'M', encoder.solution(number)
   end
+
+  def test_converts_2000_to_MM
+    encoder = RomanNumeralsEncoder.new
+    number = 2000
+
+    assert_equal 'MM', encoder.solution(number)
+  end
 end
