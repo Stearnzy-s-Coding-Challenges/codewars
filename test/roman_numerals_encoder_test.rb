@@ -113,4 +113,39 @@ class RomanNumeralsEncoderTest < Minitest::Test
 
     assert_equal 'DCLXXV', encoder.solution(number)
   end
+
+  def test_converts_1494_to_MCDXCIV
+    encoder = RomanNumeralsEncoder.new
+    number = 1494
+
+    assert_equal 'MCDXCIV', encoder.solution(number)
+  end
+
+  def test_converts_949_to_CMXLIX
+    encoder = RomanNumeralsEncoder.new
+    number = 949
+
+    assert_equal 'CMXLIX', encoder.solution(number)
+  end
+
+  def test_converts_8_to_VIII
+    encoder = RomanNumeralsEncoder.new
+    number = 8
+
+    assert_equal 'VIII', encoder.solution(number)
+  end
+
+  def test_converts_3999_to_MMMCMXCIX
+    encoder = RomanNumeralsEncoder.new
+    number = 3999
+
+    assert_equal 'MMMCMXCIX', encoder.solution(number)
+  end
+
+  def test_0_returns_empty_string
+    encoder = RomanNumeralsEncoder.new
+    number = 0
+
+    assert_equal '', encoder.solution(number)
+  end
 end
