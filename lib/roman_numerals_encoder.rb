@@ -13,9 +13,12 @@ class RomanNumeralsEncoder
     result = ''
 
     NUMERALS.each do |num_key, letter|
-      if number / num_key >= 1
-        result.concat(letter)
-        number -= num_key
+      count = number / num_key
+        if count >= 1
+        count.times do
+          result.concat(letter)
+          number -= num_key
+        end
       end
     end
 
